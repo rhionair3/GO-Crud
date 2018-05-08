@@ -1,0 +1,39 @@
+{{ define "TList" }}
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+      <title>Golang Mysql Curd Example</title>
+      <meta charset="UTF-8" />
+  </head>
+  <body>
+      <h1>Golang Mysql Curd Example</h1>
+      <h2> Registered </h2>
+      <table border="1">
+        <thead>
+        <tr>
+          <td>ID</td>
+          <td>Nama</td>
+          <td>Deskripsi</td>
+          <td>Status</td>
+          <td>View</td>
+          <td>Edit</td>
+          <td>Delete</td>
+        </tr>
+         </thead>
+         <tbody>
+      {{ range . }}
+        <tr>
+          <td>{{ .ID }}</td>
+          <td> {{ .Nama }} </td>
+          <td>{{ .Deskripsi }} </td> 
+          <td>{{ .Status }} </td> 
+          <td><a href="/ttampil?ID={{ .ID }}">View</a></td>
+          <td><a href="/tubah?ID={{ .ID }}">Edit</a></td>
+          <td><a href="/hapus?ID={{ .ID }}">Delete</a><td>
+        </tr>
+      {{ end }}
+         </tbody>
+      </table>
+    </body>
+</html>
+{{ end }}

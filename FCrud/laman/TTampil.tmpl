@@ -1,0 +1,13 @@
+{{ define "TTampil" }}
+<html lang="en-US">
+  <head>
+      <title>Golang Mysql Curd Example</title>
+      <meta charset="UTF-8" />
+  </head>
+  <body>
+    <h2> Register {{ .ID }} </h2>
+      <p>Nama: {{ .Nama }}</p>
+      <p>Deskripsi:  {{ .Deskripsi }}</p><br /> <a href="/tubah?id={{ .Id }}">Edit</a></p>
+    </body>
+</html>
+{{ end }}

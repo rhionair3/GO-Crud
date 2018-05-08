@@ -1,0 +1,18 @@
+{{ define "TUbah" }}
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+      <title>Golang Mysql Curd Example</title>
+      <meta charset="UTF-8" />
+  </head>
+  <body>
+   <h2>Edit Nama and Deskripsi</h2>  
+    <form method="POST" action="update">
+      <input type="hidden" name="ID" value="{{ .ID }}" />
+      <label> Nama </label><input type="text" name="Nama" value="{{ .Nama }}"  /><br />
+      <label> Deskripsi </label><input type="text" name="Deskripsi" value="{{ .Deskripsi }}"  /><br />
+      <input type="submit" value="Save user" />
+    </form><br />
+    </body>
+</html>
+{{ end }}
